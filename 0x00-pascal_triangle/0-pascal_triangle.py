@@ -10,7 +10,7 @@ def pascal_triangle(n):
         return []
     pascal_tria = []
     for i in range(n):
-        for j in range(n):
+        for j in range(i+1):
             temp_ar = []
             if i == 0:
                 temp_ar.append(1)
