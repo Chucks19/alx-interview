@@ -8,6 +8,7 @@ def minOperations(n):
     Returns:
         Integer : if n is impossible, return 0
     '''
+    if not isinstance(n, int)
     pasted_ch = 1  # amount chars in the fil
     cliboard = 0  # amount H's copied
     couter = 0  # operations counter
@@ -16,7 +17,7 @@ def minOperations(n):
         # if did not copy anything yet then
         if cliboard == 0:
             # copyall
-            clipboard = pasted_ch
+            cliboard = pasted_ch
             # increment counter
             couter += 1
         # if haven't pasted anything yet
@@ -51,3 +52,4 @@ def minOperations(n):
         return couter
     else:
         return 0
+    
