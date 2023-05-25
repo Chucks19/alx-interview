@@ -34,23 +34,23 @@ def init():
         print("Usage: nqueens N")
         sys.exit(1)
     if sys.argv[1].isdigit():
-        n = int(sys.argv[1])
+        ni = int(sys.argv[1])
     else:
         print("N must be a number")
         sys.exit(1)
-    if n < 4:
+    if ni < 4:
         print("N must be at least 4")
         sys.exit(1)
-    return (n)
+    return (ni)
 
 
 def n_queens():
 
     n = init()
     # generate all solutions
-    solut = generate_sols(n, n)
+    solute = generate_sols(n, n)
     # print solutions
-    for arr in solut:
+    for arr in solute:
         clean = []
         for q, x in enumerate(arr):
             clean.append([q, x])
