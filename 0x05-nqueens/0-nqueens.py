@@ -5,27 +5,27 @@
 import sys
 
 
-def generate_sols(row, column):
-    solut = [[]]
-    for n in range(row):
-        solut = place_qun(n, column, solut)
-    return solut
+def generate_solutions(row, column):
+    solution = [[]]
+    for queen in range(row):
+        solution = place_queen(queen, column, solution)
+    return solution
 
 
-def place_qun(n, column, prev_solut):
-    safe_posit = []
-    for arr in prev_solut:
+def place_queen(queen, column, prev_solution):
+    safe_position = []
+    for array in prev_solution:
         for x in range(column):
-            if is_safe(n, x, arr):
-                safe_posit.append(arr + [x])
-    return safe_posit
+            if is_safe(queen, x, array):
+                safe_position.append(array + [x])
+    return safe_position
 
 
-def is_safe(q, x, arr):
-    if x in arr:
+def is_safe(q, x, array):
+    if x in array:
         return (False)
     else:
-        return all(abs(arr[column] - x) != q - column
+        return all(abs(array[column] - x) != q - column
                    for column in range(q))
 
 
@@ -34,25 +34,25 @@ def init():
         print("Usage: nqueens N")
         sys.exit(1)
     if sys.argv[1].isdigit():
-        ni = int(sys.argv[1])
+        n = int(sys.argv[1])
     else:
         print("N must be a number")
         sys.exit(1)
-    if ni < 4:
+    if n < 4:
         print("N must be at least 4")
         sys.exit(1)
-    return (ni)
+    return (n)
 
 
 def n_queens():
 
     n = init()
     # generate all solutions
-    solute = generate_sols(n, n)
+    solutions = generate_solutions(n, n)
     # print solutions
-    for arr in solute:
+    for array in solutions:
         clean = []
-        for q, x in enumerate(arr):
+        for q, x in enumerate(array):
             clean.append([q, x])
         print(clean)
 
