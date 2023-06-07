@@ -46,7 +46,7 @@ def rotate_2d_matrix(matrix):
     3 6 9
     """
 
-    transp_matrx(matrix, n)
+    transp_matrx(matrix, na)
 
     # reverse matrix
     """
