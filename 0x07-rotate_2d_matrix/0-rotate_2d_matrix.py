@@ -9,9 +9,9 @@ def transpose_matx(matrix, n):
     Args:
        description_
     """
-    for A in range(n):
-        for j in range(A, n):
-            matrix[A][j], matrix[j][A] = matrix[j][A], matrix[A][j]
+    for i in range(n):
+        for j in range(i, n):
+            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
 
 
 def reverse_matx(matrix):
