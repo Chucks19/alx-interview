@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Summary of Matrix inverse
+"""Summary of Matrix rotation
 """
 
 
