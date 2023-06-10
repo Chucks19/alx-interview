@@ -1,24 +1,24 @@
 #!/usr/bin/python3
-"""_summary_
+"""Summary of matrix rotation
 """
 
 
-def transpose_matrix(matrix, n):
+def transpose(matrix, n):
     """_summary_
 
     Args:
-                    matrix (_type_): _description_
+         _description_
     """
     for i in range(n):
         for j in range(i, n):
             matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
 
 
-def reverse_matrix(matrix):
+def reverse(matrix):
     """_summary_
 
     Args:
-                    matrix (_type_): _description_
+        _description_
     """
     for row in matrix:
         row.reverse()
@@ -28,7 +28,7 @@ def rotate_2d_matrix(matrix):
     """_summary_
 
     Args:
-                    matrix (_type_): _description_
+        _description_
     """
     n = len(matrix)
     # print(n)
@@ -46,7 +46,7 @@ def rotate_2d_matrix(matrix):
     3 6 9
     """
 
-    transpose_matrix(matrix, n)
+    transpose(matrix, n)
 
     # reverse matrix
     """
@@ -54,6 +54,6 @@ def rotate_2d_matrix(matrix):
     8 5 2
     9 6 3
     """
-    reverse_matrix(matrix)
+    reverse(matrix)
 
     return matrix
