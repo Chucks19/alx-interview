@@ -10,7 +10,7 @@ def transpose_matx(matrix, n):
        description_
     """
     for A in range(n):
-        for j in range(i, n):
+        for j in range(A, n):
             matrix[A][j], matrix[j][A] = matrix[j][A], matrix[A][j]
 
 
@@ -52,3 +52,4 @@ def rotate_2d_matx(matrix):
     reverse_matx(matrix)
 
     return matrix
+
