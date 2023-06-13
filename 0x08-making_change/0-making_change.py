@@ -5,7 +5,7 @@ achieve a given amount total
 """
 
 
-def makChnge(coins, total):
+def makeChange(coins, total):
     """ fewest number of coins needed to meet total """
     if total <= 0:
         return 0
@@ -15,9 +15,9 @@ def makChnge(coins, total):
     for coin in coins:
         if total <= 0:
             break
-        temp = total // coin
-        chnge += temp
-        total -= (temp * coin)
+        tmp = total // coin
+        chnge += tmp
+        total -= (tmp * coin)
     if total != 0:
         return -1
     return chnge
